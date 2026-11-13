@@ -1,4 +1,4 @@
-# HWI — Human–Wiki–Agent Integration
+# Mnemosyne — Human–Wiki–Agent Integration
 
 **An experimental agent prototype exploring persistent, revision-aware knowledge and human-governed memory.**
 
