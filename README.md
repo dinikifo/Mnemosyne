@@ -2,13 +2,13 @@
 
 **An experimental agent prototype exploring persistent, revision-aware knowledge and human-governed memory.**
 
-HWI is one of two spin-offs from **AutoGPT Lite** (the other is [Desiderata](https://github.com/dinikifo/Desiderata)). Both explore memory and reasoning limitations encountered when working with AutoGPT-style agents. HWI combines the author's AutoGPT Lite runtime with modules developed for the author's **PERSONAL.WIKI** and personal versioning/provenance system (**PVS**). The emphasis is not only remembering more text: it is making knowledge persistent, retrievable, revision-aware, and inspectable before accepting changes.
+Mnemosyne is one of two spin-offs from **AutoGPT Lite** (the other is [Desiderata](https://github.com/dinikifo/Desiderata)). Both explore memory and reasoning limitations encountered when working with AutoGPT-style agents. HWI combines the author's AutoGPT Lite runtime with modules developed for the author's **PERSONAL.WIKI** and personal versioning/provenance system (**PVS**). The emphasis is not only remembering more text: it is making knowledge persistent, retrievable, revision-aware, and inspectable before accepting changes.
 
 It was developed through substantial human-directed collaboration with generative AI systems, including AI-assisted design, code development, criticism, testing, and documentation. The identities of particular systems are not necessary to evaluate the released code. Human authorization governs project goals and policy; executable checks and review receipts provide bounded technical evidence. Neither human authorization nor AI output alone establishes scientific correctness.
 
 **Status: experimental prototype, not a production system.** The author reports that it is stable enough to serve as a base for experiments, but it has **not** been extensively tested for bugs, hostile inputs, security failures, or ways to break its authorization mechanisms. No formal reliability or safety certification is claimed.
 
-## What HWI explores
+## What Mnemosyne explores
 
 - **Persistent knowledge beyond conversation history:** integrating a local wiki and its SQLite-based records with the agent runtime rather than depending solely on compressed chat/action context.
 - **Memory provenance and revisions:** recording change histories, retrieving existing information, inspecting sources, and working with explicit revision identities.
@@ -35,9 +35,12 @@ The suitability of any application depends on further testing, task-specific con
 | --- | --- |
 | **AutoGPT Lite** | Independently written AutoGPT Classic-style local agent prototype; foundation for both spin-offs |
 | **[Desiderata](https://github.com/dinikifo/Desiderata)** | Separate AutoGPT Lite spin-off exploring memory and symbolic reasoning (see its repository for details) |
-| **HWI (this repository)** | AutoGPT Lite-derived prototype integrating PERSONAL.WIKI knowledge, PVS-inspired provenance/revisions and human review |
+| **Mnemosyne (this repository)** | AutoGPT Lite-derived prototype integrating PERSONAL.WIKI knowledge, PVS-inspired provenance/revisions and human review |
 
-PERSONAL.WIKI and PVS are the author's previously developed projects; links to their original repositories can be added when their exact URLs are provided. **HWI reuses and extends AutoGPT Lite source code.** It is not a clean-room reimplementation of AutoGPT Lite, and it is not affiliated with the upstream AutoGPT project.
+PERSONAL.WIKI and PVS are the author's previously developed projects:
+* Personal versioning system: https://github.com/dinikifo/ReasonWiki
+* Personal wiki system: https://github.com/dinikifo/python-tidly-wiki
+. **Mnemosyne reuses and extends AutoGPT Lite source code.** It is not a clean-room reimplementation of AutoGPT Lite, and it is not affiliated with the upstream AutoGPT project.
 
 ## Quick exploration
 
@@ -62,20 +65,6 @@ bash RUN_AGENT_FORMATION.command start --manual
 `sh INSTALL.sh --help` documents machine-profile setup. The manual is [`USER_MANUAL.md`](USER_MANUAL.md). The offline suite uses temporary synthetic notebooks rather than personal wiki data. Running tests successfully on one machine does not mean the agent has been hardened or certified for real workloads.
 
 **Important:** some old reference documents mention archived Git bundles, earlier refactor checkpoints and the original consolidated release. Those are deliberately excluded from this source-first GitHub package; see [`docs/RELEASE_CLEANUP.md`](docs/RELEASE_CLEANUP.md). The original research snapshot remains separately preserved.
-
-## Source layout
-
-| Directory | Purpose |
-| --- | --- |
-| `CODE/APPROVED_AGENT_PROVIDER/autogpt_lite/` | AutoGPT Lite-derived agent runtime and Ollama integration |
-| `CODE/APPROVED_WIKI_CORE/personal_wiki_core/` | PERSONAL.WIKI storage, history, revisions, and related core logic |
-| `CODE/APPROVED_WIKI_CORE/hwi/` | HWI knowledge, provenance, retrieval and reviewed-write integration |
-| `CODE/DUALFLOW/hwi_governance/` | Experimental governance, task fitness, review and recovery components |
-| `CODE/DUALFLOW/hwi_formation/` | Experimental advisory Agent Formation workflows |
-| `CODE/DUALFLOW/tools/` | Dual-Flow simulation, evaluation, regression tests and tools |
-| `CODE/DUALFLOW/docs/` | Specifications and experiment documentation |
-| `CONTENT_EVAL/`, `MAC_TOOLS/` | Content-evaluation fixtures and macOS diagnostic harness |
-| `docs/history/` | Historical accepted-baseline records, **not** an approval of current experiments |
 
 ## What has and has not been validated
 
