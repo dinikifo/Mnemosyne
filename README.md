@@ -33,7 +33,7 @@ The suitability of any application depends on further testing, task-specific con
 
 | Project | Relationship |
 | --- | --- |
-| **AutoGPT Lite** | Independently written AutoGPT Classic-style local agent prototype; foundation for both spin-offs |
+| **[AutoGPT Lite](https://github.com/dinikifo/autoGPT-lite/tree/main)** | Independently written AutoGPT Classic-style local agent prototype; foundation for both spin-offs |
 | **[Desiderata](https://github.com/dinikifo/Desiderata)** | Separate AutoGPT Lite spin-off exploring memory and symbolic reasoning (see its repository for details) |
 | **Mnemosyne (this repository)** | AutoGPT Lite-derived prototype integrating PERSONAL.WIKI knowledge, PVS-inspired provenance/revisions and human review |
 
