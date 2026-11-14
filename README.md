@@ -85,6 +85,11 @@ Treat files, notes, retrieved content, model output and generated commands as un
 
 The clean repository contains active source, offline tests, user-facing documentation, and selected historical status records. It intentionally excludes Git bundles, nested ZIP baselines, generated manuals, duplicate trees and historical refactor logs. The original accepted source trees remain recognizable by directory name, but this is a **repackaged publication**, not a byte-for-byte reproduction of the archived release. Its new integrity manifest verifies the repackaged files only.
 
+## Addenum
+
+14/11/26: 
+* I created a 2nd version utilising decision tables for cleaner handling of decision logic, and an Eliza inspired router for better component level decoupling.
+* Included documents describing the agent architecture for better documentation and ways the agent gain more functionality. 
 ## License
 
 The author's original source code and documentation in this repository are released under **[CC0 1.0 Universal](LICENSE)** (`CC0-1.0`). The full public-domain dedication is in [`LICENSE`](LICENSE). CC0 does not relicense independent third-party dependencies or grant patent/trademark rights. Review provenance before redistributing any material owned by someone else.
